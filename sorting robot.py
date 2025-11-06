@@ -23,7 +23,7 @@ def generate_random_position(objects):
         overlap = False
         for obj in objects:
             distance = math.sqrt((position[0] - obj["position"][0]) ** 2 + (position[1] - obj["position"][1]) ** 2) 
-            # math.sqrt((x2-x1)^2 + (y2-y1)^2) Pythagoras theorem
+            # math.sqrt((x2-x1)^2 + (y2-y1)^2) Euclidean distance formula
             # Used to find the min st line distance bet the points
             if distance < min_distance:
                 overlap = True
@@ -161,3 +161,4 @@ def simulate_sorting():
 
 # Run the simulation
 simulate_sorting()
+
